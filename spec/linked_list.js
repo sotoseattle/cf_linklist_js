@@ -1,15 +1,14 @@
 var m = require('../lib/linked_list.js');
 var expect = require('chai').expect;
 
-
-// happy path
+// These tests cover most the scenarios.
 
 var a = new m.node('A');
 var b = new m.node('B');
 var c = new m.node('C');
 var d = new m.node('D');
 
-// insert
+// insert && size
 var ll = new m.linked_list(a);
   expect(ll.head).to.equal(a);
   expect(ll.head.nexxt).to.equal(null);
@@ -34,12 +33,15 @@ ll.insert(d);
   expect(c.prev).to.equal(d);
   expect(d.prev).to.equal(null);
 
+// to_s
 expect(ll.to_s()).to.equal('D, C, B, A');
 
+// search
 expect(ll.search('B')).to.equal(b);
 var n99 = new m.node('Z');
 expect(ll.search('Z')).to.equal(null);
 
+// remove
 ll.remove(c);
 expect(b.prev).to.equal(d);
 expect(d.nexxt).to.equal(b);

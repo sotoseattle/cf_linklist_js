@@ -1,0 +1,14 @@
+{
+  "name": "data-structs-js",
+  "version": "0.0.1",
+  "description": "Data Structures and Algorithms in JS",
+  "author": "Javier Soto <sotoseattle@gmail.com>",
+
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "grunt": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-watch": "*"
+  }
+}
